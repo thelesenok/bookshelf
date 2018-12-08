@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function(){
+    loadBooks();
+})
+
 function showAddForm() {
     var addForm;
     addForm = document.getElementById("addForm");
@@ -20,6 +24,12 @@ function loadBooks() {
 }
 
 function displayBooks(books) {
+    var allRows;
+    allRows = document.getElementById("dispayBooks");
+    var rowCount = allRows.rows.length;
+    for (var j = 1; j < rowCount; j++) {
+        allRows.deleteRow(1);
+    }
     for (var i = 0; i < books.length; i++) {
         var dispayBooks;
         dispayBooks = document.getElementById("dispayBooks");
