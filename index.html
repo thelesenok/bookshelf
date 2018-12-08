@@ -1,0 +1,85 @@
+<html>
+<head>
+    <script src="myscript.js"></script>
+    <link rel="stylesheet" type="text/css" href="mystyle.css" media="screen" />
+</head>
+<body>
+</br>
+<table>
+    <tr>
+        <td>
+            <button onclick="showAddForm()">+</button>
+        </td>
+        <td>
+            <input>
+        </td>
+    </tr>
+</table>
+<table class="hidden" id="addForm">
+    <tr>
+        <td>
+            NAME
+        </td>
+        <td>
+            <input>
+        </td>
+    </tr>
+    <tr>
+            <td>
+                AUTHOR
+            </td>
+            <td>
+                <input>
+            </td>
+    </tr>
+    <tr>
+        <td>
+
+        </td>
+        <td>
+            <button>
+                OK
+            </button>
+            <button>
+                ABORT
+            </button>
+        </td>
+    </tr>
+</table>
+</br>
+<button onclick="loadBooks()">
+    LOAD
+</button>
+</br>
+</br>
+<table border=1 id="dispayBooks">
+    <tr>
+        <td>
+            NAME
+        </td>
+        <td>
+            AUTHOR
+        </td>
+        <td>
+            ACTIONS
+        </td>
+    </tr>
+    <tr>
+        <td>
+            NEW BOOK
+        </td>
+        <td>
+            NEW AUTHOR
+        </td>
+        <td>
+            <button>
+                EDIT
+            </button>
+            <button>
+                DELETE
+            </button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
