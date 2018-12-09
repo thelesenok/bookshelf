@@ -6,7 +6,7 @@
 
 Bookshelf is an digital liblary. 
 
-  - add new book (coming up next)
+  - add new book **(coming up next)**
   - remove book from your liblary
   - edit book discription
   - search books
@@ -22,16 +22,13 @@ Bookshelf uses a number of open source projects to work properly:
 
 * Javasript
 * CSS
-* [jQuery] - duh (coming up next) 
-* [Bootstrap] - duh (coming up next)
+* [jQuery] - duh **(coming up next)**
+* [Bootstrap] - duh **(coming up next)**
 
 License
 ----
 
 MIT
-
-
-**Free Software, Hell Yeah!**
 
    [jQuery]: <http://jquery.com>
    [Bootstrap]: <https://getbootstrap.com>
