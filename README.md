@@ -2,8 +2,6 @@
 
 [![N|Solid](http://www.krug.rs/images/2018/oktobar/9458.jpg)](http://www.krug.rs/images/2018/oktobar/9458.jpg)
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/thelesenok)
-
 Bookshelf is an digital liblary. 
 
   - add new book **(coming up next)**
@@ -14,7 +12,6 @@ Bookshelf is an digital liblary.
 ### New Features!
 
   - Refresh book's list
-
 
 ### Tech
 
@@ -31,4 +28,4 @@ License
 MIT
 
    [jQuery]: <http://jquery.com>
-   [Bootstrap]: <https://getbootstrap.com>
+   [Bootstrap]: <https://getbootstrap.com
