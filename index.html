@@ -4,82 +4,64 @@
     <link rel="stylesheet" type="text/css" href="mystyle.css" media="screen" />
 </head>
 <body>
-</br>
-<table>
-    <tr>
-        <td>
-            <button onclick="showAddForm()">+</button>
-        </td>
-        <td>
-            <input>
-        </td>
-    </tr>
-</table>
-<table class="hidden" id="addForm">
-    <tr>
-        <td>
-            NAME
-        </td>
-        <td>
-            <input>
-        </td>
-    </tr>
-    <tr>
-            <td>
-                AUTHOR
-            </td>
-            <td>
-                <input>
-            </td>
-    </tr>
-    <tr>
-        <td>
+<div class="wrapper">
+    <div class="button" onclick="showPopup()">
+        (+) ADD NEW
+    </div>
+    <div class="button" onclick="loadBooks()">
+        REFRESH
+    </div>
+</div>
 
-        </td>
-        <td>
-            <button>
-                OK
-            </button>
-            <button>
-                ABORT
-            </button>
-        </td>
-    </tr>
-</table>
-</br>
-<button onclick="loadBooks()">
-    LOAD
-</button>
-</br>
-</br>
-<table border=1 id="dispayBooks">
-    <tr>
-        <td>
-            NAME
-        </td>
-        <td>
-            AUTHOR
-        </td>
-        <td>
-            ACTIONS
-        </td>
-    </tr>
-    <tr>
-        <td>
-            NEW BOOK
-        </td>
-        <td>
-            NEW AUTHOR
-        </td>
-        <td>
-            <button>
-                EDIT
-            </button>
-            <button>
-                DELETE
-            </button>
-        </td>
-    </tr>
-</table>
+<div id="overlay" class="overlay-hidden">
+    <div id="popup" class="popup">
+        <div class="titlePopup">   
+            <div class="title">
+                <p> ADD NEW BOOK </p>
+            </div>  
+            <div class="closeButton">
+                <div onclick="closePopup()">X</div>
+            </div>
+        </div>
+        <div>
+            <div class="inputNames">
+                NAME
+            </div>
+            <div>
+                <input class="input">
+            </div>
+            <div class="inputNames">
+                AUTHOR
+            </div>
+            <div>
+                <input class="input">
+            </div>
+        </div>
+        <div class="footerPopup">
+            <div class="save">
+                <div onclick="closePopup()">SAVE</div>
+            </div>
+            <div class="close">
+                <div onclick="closePopup()">CLOSE</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <table border="1" cellspacing="0" cellpadding="5" id="dispayBooks">
+        <tr>
+            <th>
+                NAME
+            </th>
+            <th>
+                AUTHOR
+            </th>
+            <th>
+                ACTIONS
+            </th>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

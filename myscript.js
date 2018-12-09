@@ -5,8 +5,20 @@ document.addEventListener("DOMContentLoaded", function(){
 function showAddForm() {
     var addForm;
     addForm = document.getElementById("addForm");
-    //debugger;
     addForm.className = "show";
+}
+
+function showPopup() {
+    var popup;
+    popup = document.getElementById("overlay");
+    popup.style.display = "block"
+}
+
+function closePopup() {
+    var hidePopup;
+    hidePopup = document.getElementById("overlay");
+    //hidePopup.className = "overlay-hidden";
+    hidePopup.style.display = "none"
 }
 
 function loadBooks() {
