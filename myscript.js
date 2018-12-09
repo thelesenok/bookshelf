@@ -17,7 +17,6 @@ function showPopup() {
 function closePopup() {
     var hidePopup;
     hidePopup = document.getElementById("overlay");
-    //hidePopup.className = "overlay-hidden";
     hidePopup.style.display = "none"
 }
 
