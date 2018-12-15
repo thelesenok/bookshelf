@@ -53,3 +53,20 @@ function displayBooks(books) {
         displayCellActions.appendChild(document.createTextNode("no actions"));
     }
 }
+
+function saveBooks() {
+    var xhttp;
+    xhttp = new XMLHttpRequest;
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("Book was successfully added")
+        }
+    }; 
+    xhttp.open("POST", "newbook.json", true);
+    var newBook;
+    newBook = {
+        name: document.getElementById("bookName").value,
+        author: document.getElementById("bookAuthor").value
+    }
+    xhttp.send(JSON.stringify(newBook));
+}
