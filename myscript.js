@@ -90,8 +90,8 @@ function saveBooks() {
     xhttp.open("POST", "newbook.json", true);
     var newBook;
     newBook = {
-        name: document.getElementById("bookName").value,
-        author: document.getElementById("bookAuthor").value
+        name: document.getElementById("exampleInputBookName").value,
+        author: document.getElementById("exampleInputBookAuthor").value
     }
     xhttp.send(JSON.stringify(newBook));
 }
