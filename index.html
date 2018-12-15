@@ -17,64 +17,72 @@
     <script src="myscript.js"></script>
 </head>
 <body>
-<div class="wrapper">
-    <div class="button" onclick="showPopup()">
-        (+) ADD NEW
-    </div>
-    <div class="button" onclick="loadBooks()">
-        REFRESH
-    </div>
-</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">thelesenok's books</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
 
-<div id="overlay" class="overlay-hidden">
-    <div id="popup" class="popup">
-        <div class="titlePopup">   
-            <div class="title">
-                <p> ADD NEW BOOK </p>
-            </div>  
-            <div class="closeButton">
-                <div onclick="closePopup()">X</div>
-            </div>
-        </div>
-        <div>
-            <div class="inputNames">
-                NAME
-            </div>
-            <div>
-                <input class="input">
-            </div>
-            <div class="inputNames">
-                AUTHOR
-            </div>
-            <div>
-                <input class="input">
-            </div>
-        </div>
-        <div class="footerPopup">
-            <div class="save">
-                <div onclick="closePopup()">SAVE</div>
-            </div>
-            <div class="close">
-                <div onclick="closePopup()">CLOSE</div>
+    </br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">(+) ADD NEW</button>    
+                <button type="button" class="btn btn-secondary" onclick="loadBooks()">REFRESH</button>
             </div>
         </div>
     </div>
-</div>
+      
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">ADD NEW BOOK</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputBookName">NAME</label>
+                        <input type="text" class="form-control" id="exampleInputBookName" aria-describedby="emailHelp" placeholder="Please enter book name">
+                        <small id="emailHelp" class="form-text text-muted">The book title ^з</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputBookAuthor">AUTHOR</label>
+                        <input type="text" class="form-control" id="exampleInputBookAuthor" placeholder="Please enter book author">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+    </div>
 
-<div class="wrapper">
-    <table border="1" cellspacing="0" cellpadding="5" id="dispayBooks">
-        <tr>
-            <th>
-                NAME
-            </th>
-            <th>
-                AUTHOR
-            </th>
-            <th>
-                ACTIONS
-            </th>
-        </tr>
-    </table>
-</div>
+    </br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto">
+                <table class="table" id="dispayBooks">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">NAME</th>
+                            <th scope="col">AUTHOR</th>
+                            <th scope="col">ACTIONS</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -2,24 +2,6 @@ document.addEventListener("DOMContentLoaded", function(){
     loadBooks();
 })
 
-function showAddForm() {
-    var addForm;
-    addForm = document.getElementById("addForm");
-    addForm.className = "show";
-}
-
-function showPopup() {
-    var popup;
-    popup = document.getElementById("overlay");
-    popup.style.display = "block"
-}
-
-function closePopup() {
-    var hidePopup;
-    hidePopup = document.getElementById("overlay");
-    hidePopup.style.display = "none"
-}
-
 function loadBooks() {
     var xhttp;
     xhttp = new XMLHttpRequest;
@@ -34,22 +16,65 @@ function loadBooks() {
     xhttp.send();
 }
 
-function displayBooks(books) {
-    var allRows;
-    allRows = document.getElementById("dispayBooks");
-    var rowCount = allRows.rows.length;
+function displayBooks(books) {    
+    var dispayBooks;
+    dispayBooks = document.getElementById("dispayBooks");
+
+    var rowCount = dispayBooks.rows.length;
     for (var j = 1; j < rowCount; j++) {
-        allRows.deleteRow(1);
+        dispayBooks.deleteRow(1);
     }
-    for (var i = 0; i < books.length; i++) {
-        var dispayBooks;
-        dispayBooks = document.getElementById("dispayBooks");
-        var displayRow = dispayBooks.insertRow(-1);
-        var displayCellName = displayRow.insertCell(-1);
-        displayCellName.appendChild(document.createTextNode(books[i].name));
-        var displayCellAuthor = displayRow.insertCell(-1);
-        displayCellAuthor.appendChild(document.createTextNode(books[i].author));
-        var displayCellActions = displayRow.insertCell(-1);
-        displayCellActions.appendChild(document.createTextNode("no actions"));
+    
+    var bookTbody = document.createElement('tbody');
+    dispayBooks.appendChild(bookTbody);
+
+    for (var i = 0; i < books.length; i++) {    
+        
+        var bookRow = document.createElement('tr');
+        bookTbody.appendChild(bookRow);
+
+        var bookTh = document.createElement('th');
+        bookTh.setAttribute("scope", "row");
+        bookTh.innerHTML = i + 1;
+        bookRow.appendChild(bookTh);
+        
+        var bookNameCell = document.createElement('td');
+        bookNameCell.innerHTML = books[i].name;
+        bookRow.appendChild(bookNameCell);
+
+        var bookAuthorCell = document.createElement('td');
+        bookAuthorCell.innerHTML = books[i].author;
+        bookRow.appendChild(bookAuthorCell);
+
+        var bookActionsCell = document.createElement('td');
+        bookRow.appendChild(bookActionsCell);
+
+        var bookActionToolbar = document.createElement('div');
+        bookActionToolbar.setAttribute("class", "btn-toolbar");
+        bookActionToolbar.setAttribute("role", "toolbar");
+        bookActionsCell.appendChild(bookActionToolbar);
+
+        var bookActionGroupEdit = document.createElement('div');
+        bookActionGroupEdit.setAttribute("class", "btn-group mr-2");
+        bookActionGroupEdit.setAttribute("role", "group");
+        bookActionGroupEdit.setAttribute("aria-label", "edit");
+        bookActionToolbar.appendChild(bookActionGroupEdit);
+
+        var bookActionsEditButton = document.createElement('button');
+        bookActionsEditButton.setAttribute("class", "btn btn-warning");
+        bookActionsEditButton.innerHTML = "EDIT";
+        bookActionGroupEdit.appendChild(bookActionsEditButton);
+
+        var bookActionGroupDelete = document.createElement('div');
+        bookActionGroupDelete.setAttribute("class", "btn-group");
+        bookActionGroupDelete.setAttribute("role", "group");
+
+        bookActionGroupDelete.setAttribute("aria-label", "delete");
+        bookActionToolbar.appendChild(bookActionGroupDelete);
+        
+        var bookActionsDeleteButton = document.createElement('button');
+        bookActionsDeleteButton.setAttribute("class", "btn btn-danger");
+        bookActionsDeleteButton.innerHTML = "DELETE";
+        bookActionGroupDelete.appendChild(bookActionsDeleteButton);   
     }
 }
