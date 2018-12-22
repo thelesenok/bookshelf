@@ -29,18 +29,18 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-auto">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">(+) ADD NEW</button>    
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">(+) ADD NEW</button>    
                 <button type="button" class="btn btn-secondary" onclick="loadBooks()">REFRESH</button>
             </div>
         </div>
     </div>
       
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!-- Modal add new book -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">ADD NEW BOOK</h5>
+              <h5 class="modal-title" id="addModalLabel">ADD NEW BOOK</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -49,21 +49,51 @@
                 <form>
                     <div class="form-group">
                         <label for="exampleInputBookName">NAME</label>
-                        <input type="text" class="form-control" id="exampleInputBookName" aria-describedby="emailHelp" placeholder="Please enter book name">
+                        <input type="text" class="form-control" id="InputBookName" aria-describedby="emailHelp" placeholder="Please enter book name">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputBookAuthor">AUTHOR</label>
-                        <input type="text" class="form-control" id="exampleInputBookAuthor" placeholder="Please enter book author">
+                        <input type="text" class="form-control" id="InputBookAuthor" placeholder="Please enter book author">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onclick="saveBooks()">Save changes</button>
+              <button type="button" class="btn btn-primary" onclick="addBook()">Add book</button>
             </div>
           </div>
         </div>
     </div>
+
+    <!-- Modal edit new book -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="editModalLabel">EDIT BOOK</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputBookName">NAME</label>
+                            <input type="text" class="form-control" id="InputBookNameRus" aria-describedby="emailHelp" placeholder="Please enter book name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputBookAuthor">AUTHOR</label>
+                            <input type="text" class="form-control" id="InputBookAuthorFirstNameRus" placeholder="Please enter book author">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" onclick="editBook()">Edit book</button>
+                </div>
+              </div>
+            </div>
+        </div>
 
     </br>
 

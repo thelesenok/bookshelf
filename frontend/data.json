@@ -1,43 +1,60 @@
-{"books": [ 
-    {
-        "name": "NAME 1",
-        "author": "ATHOR 1"
-    },
-    {
-        "name": "NAME 2",
-        "author": "ATHOR 1"
-    },
-    {
-        "name": "NAME 3",
-        "author": "ATHOR 2"
-    },
-    {
-        "name": "NAME 4",
-        "author": "ATHOR 4"
-    },
-    {
-        "name": "NAME 5",
-        "author": "ATHOR 1"
-    },
-    {
-        "name": "NAME 6",
-        "author": "ATHOR 2"
-    },
-    {
-        "name": "NAME 7",
-        "author": "ATHOR 2"
-    },
-    {
-        "name": "NAME 8",
-        "author": "ATHOR 2"
-    },
-    {
-        "name": "NAME 8",
-        "author": "ATHOR 2"
-    },
-    {
-        "name": "NAME 9",
-        "author": "ATHOR 2"
-    }
-  ]
-}
+{
+    "books": [
+      {
+        "authors": [
+          {
+            "id": 2,
+            "firstNameRus": "Дэн",
+            "lastNameRus": "Кеннеди",
+            "firstNameEng": "Dan",
+            "lastNameEng": "Kennedy"
+          }
+        ],
+        "id": 33,
+        "nameRus": "Жесткий менеджмент. Заставьте людей работать на результат",
+        "nameEng": "Ruthless Management of People and Profits: The Ultimate, No Holds Barred, Kick Butt, Take No Prisoners Guide to Really Getting Rich",
+        "year": "2018",
+        "language": "language name: ru, en, pt or other",
+        "bestseller": true,
+        "pages": 332,
+        "descriptionRus": "Каждый наемный служащий думает, что он умнее своего босса. Ваши работники считают, что они перерабатывают, а им недоплачивают, что они вкладывают в ваш бизнес гораздо больше вас самих, и значит, вполне могут игнорировать или обходить ваши указания, стандарты и алгоритмы. Если вы тешите себя иллюзией, что ваш бизнес – исключение, вы не правы.",
+        "descriptionEng": "",
+        "ISBN": "978-5-9614-6524-2",
+        "cover": "../images/1017406215.jpg",
+        "categories": [
+          {
+            "id": 2,
+            "caterogy": "Бизнес-литература"
+          }
+        ]
+      },
+      {
+        "authors": [
+          {
+            "id": 2,
+            "firstNameRus": "Дэн",
+            "lastNameRus": "Кеннеди",
+            "firstNameEng": "Dan",
+            "lastNameEng": "Kennedy"
+          }
+        ],
+        "id": 33,
+        "nameRus": "Жесткий тайм-менеджмент. Заставьте людей работать на результат",
+        "nameEng": "Ruthless TIME Management of People and Profits: The Ultimate, No Holds Barred, Kick Butt, Take No Prisoners Guide to Really Getting Rich",
+        "year": "2018",
+        "language": "language name: ru, en, pt or other",
+        "bestseller": true,
+        "pages": 332,
+        "descriptionRus": "Каждый наемный служащий думает, что он умнее своего босса. Ваши работники считают, что они перерабатывают, а им недоплачивают, что они вкладывают в ваш бизнес гораздо больше вас самих, и значит, вполне могут игнорировать или обходить ваши указания, стандарты и алгоритмы. Если вы тешите себя иллюзией, что ваш бизнес – исключение, вы не правы.",
+        "descriptionEng": "",
+        "ISBN": "978-5-9614-6524-2",
+        "cover": "../images/1017406215.jpg",
+        "categories": [
+          {
+            "id": 2,
+            "caterogy": "Бизнес-литература"
+          }
+        ]
+      }
+    ]
+  }

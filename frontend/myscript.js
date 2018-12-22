@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
     loadBooks();
+    $("#editModal").on("show.bs.modal");
 })
 
 function loadBooks() {
@@ -35,15 +36,17 @@ function displayBooks(books) {
 
         var bookTh = document.createElement('th');
         bookTh.setAttribute("scope", "row");
-        bookTh.innerHTML = i + 1;
+        bookTh.innerHTML = (i + 1);
         bookRow.appendChild(bookTh);
         
         var bookNameCell = document.createElement('td');
-        bookNameCell.innerHTML = books[i].name;
+        bookNameCell.innerHTML = books[i].nameRus;
         bookRow.appendChild(bookNameCell);
 
         var bookAuthorCell = document.createElement('td');
-        bookAuthorCell.innerHTML = books[i].author;
+        for (var j=0; j < books[i].authors.length; j++) {
+            bookAuthorCell.innerHTML = books[i].authors[j].firstNameRus + " " + books[i].authors[j].lastNameRus;
+        }
         bookRow.appendChild(bookAuthorCell);
 
         var bookActionsCell = document.createElement('td');
@@ -62,6 +65,7 @@ function displayBooks(books) {
 
         var bookActionsEditButton = document.createElement('button');
         bookActionsEditButton.setAttribute("class", "btn btn-warning");
+        bookActionsEditButton.addEventListener("click", editBook.bind(this, books[i].id));
         bookActionsEditButton.innerHTML = "EDIT";
         bookActionGroupEdit.appendChild(bookActionsEditButton);
 
@@ -75,11 +79,12 @@ function displayBooks(books) {
         var bookActionsDeleteButton = document.createElement('button');
         bookActionsDeleteButton.setAttribute("class", "btn btn-danger");
         bookActionsDeleteButton.innerHTML = "DELETE";
+        bookActionsDeleteButton.addEventListener("click", deleteBook());
         bookActionGroupDelete.appendChild(bookActionsDeleteButton);   
     }
 }
 
-function saveBooks() {
+function AddBook() {
     var xhttp;
     xhttp = new XMLHttpRequest;
     xhttp.onreadystatechange = function() {
@@ -90,8 +95,26 @@ function saveBooks() {
     xhttp.open("POST", "newbook.json", true);
     var newBook;
     newBook = {
-        name: document.getElementById("exampleInputBookName").value,
-        author: document.getElementById("exampleInputBookAuthor").value
+        name: document.getElementById("InputBookNameRus").value,
+        author: document.getElementById("InputBookAuthorFirstNameRus").value
     }
     xhttp.send(JSON.stringify(newBook));
 }
+
+function loadBook(id) {
+    
+}
+function editBook(id) {
+
+
+    document.getElementById("InputBookNameRus").value = book[i].
+
+
+
+    $("#editModal").modal('show');
+}
+
+function deleteBook() {
+
+}
+
